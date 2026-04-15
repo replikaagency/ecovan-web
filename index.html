@@ -26,7 +26,7 @@
 <nav class="nav" id="mainNav" role="navigation" aria-label="Navegación principal">
   <div class="nav-inner">
     <a href="#" class="nav-brand" aria-label="Ecovan - Inicio">
-      <img src="assets/images/logo-ecovan.jpg" alt="Ecovan logo">
+      <img src="assets/images/logo-ecovan.jpg" alt="Ecovan logo" loading="lazy">
       <span>Ecovan</span>
     </a>
     <div class="nav-links" id="navLinks">
@@ -37,6 +37,7 @@
       <a href="#equipo">Equipo</a>
       <a href="#contacto">Contacto</a>
     </div>
+    <a href="#caso-hotel" class="nav-cta-btn">Ver caso real</a>
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -51,7 +52,7 @@
   <div class="hero-bubble" style="width:60px;height:60px;bottom:25%;left:20%;animation-duration:10s;animation-delay:-1s" aria-hidden="true"></div>
 
   <div class="hero-content">
-    <img src="assets/images/logo-ecovan.jpg" alt="Ecovan — Haz visible el desperdicio de agua" class="hero-logo">
+    <img src="assets/images/logo-ecovan.jpg" alt="Ecovan — Haz visible el desperdicio de agua" class="hero-logo" loading="eager">
 
     <div class="hero-tagline">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S5 13 5 15a7 7 0 0 0 7 7z"/></svg>
@@ -99,6 +100,19 @@
     *Estimaciones basadas en simulaciones con datos públicos del sector hídrico. Ecovan está en fase de desarrollo.
   </p>
 </section>
+
+<!-- PRUEBA SOCIAL / FUENTES -->
+<div class="sources-bar" aria-label="Fuentes de datos">
+  <div class="sources-inner">
+    <span class="sources-label">Basado en datos reales de consumo</span>
+    <span class="sources-sep" aria-hidden="true">&middot;</span>
+    <span class="sources-item">INE España</span>
+    <span class="sources-sep" aria-hidden="true">&middot;</span>
+    <span class="sources-item">Estudios de consumo hotelero</span>
+    <span class="sources-sep" aria-hidden="true">&middot;</span>
+    <span class="sources-item">Ingeniería de aguas grises</span>
+  </div>
+</div>
 
 <!-- EL PROBLEMA -->
 <section class="problem-section" id="problema">
@@ -338,7 +352,7 @@
         Ejemplo aplicado
       </span>
       <h2 class="hotel-title">Un hotel puede estar tirando miles<br>de litros de agua al día sin saberlo</h2>
-      <p class="hotel-subtitle">Caso simulado basado en rangos de consumo reales del sector hotelero y estándares de reutilización de aguas grises.</p>
+      <p class="hotel-subtitle">Ejemplo realista basado en rangos de consumo hotelero (200–500 L por huésped/día)</p>
     </div>
 
     <!-- KPI Cards -->
@@ -408,6 +422,7 @@
             <div class="hotel-monthly-label">ahorro mensual estimado</div>
           </div>
         </div>
+        <p class="hotel-tariff-note">Estimación basada en tarifas medias de agua en España</p>
       </div>
 
       <!-- Ecovan role -->
@@ -573,14 +588,14 @@
 <section class="cta-section" id="contacto">
   <div class="container cta-content">
     <div class="reveal">
-      <img src="assets/images/logo-ecovan.jpg" alt="Ecovan" class="cta-logo">
+      <img src="assets/images/logo-ecovan.jpg" alt="Ecovan" class="cta-logo" loading="lazy">
       <h2>Tu edificio pierde agua ahora mismo.<br>Ecovan te lo puede mostrar.</h2>
       <p>Sin sensores. Sin instalaciones. Solo datos claros sobre lo que hoy es invisible. Porque la sostenibilidad del agua empieza por ver el problema.</p>
-      <a href="#contacto" class="btn btn-primary" style="font-size:16px;padding:16px 36px" onclick="alert('Contacto disponible próximamente. Proyecto en fase de desarrollo.');">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+      <button type="button" class="btn btn-primary" style="font-size:16px;padding:16px 36px" id="openContactModal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2"/><polyline points="22,6 12,13 2,6"/></svg>
         Quiero saber más
-      </a>
-      <p style="font-size:12px;color:rgba(255,255,255,.3);margin-top:16px">Proyecto en fase de desarrollo · Universidad de Almería</p>
+      </button>
+      <p style="font-size:12px;color:rgba(255,255,255,.3);margin-top:16px">Proyecto en fase piloto · Universidad de Almería</p>
     </div>
   </div>
 </section>
@@ -589,13 +604,37 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="assets/images/logo-ecovan.jpg" alt="Ecovan">
+      <img src="assets/images/logo-ecovan.jpg" alt="Ecovan" loading="lazy">
       <span>Ecovan</span>
     </div>
     <p class="footer-copy">&copy; 2026 Ecovan &middot; Haciendo visible el desperdicio de agua &middot; Datos estimados</p>
     <p class="footer-ual">Proyecto de estudiantes &middot; Universidad de Almería</p>
   </div>
 </footer>
+
+<!-- CONTACT MODAL -->
+<div class="modal-overlay" id="contactModal" aria-hidden="true" role="dialog" aria-label="Contacto">
+  <div class="modal-box">
+    <button class="modal-close" id="closeContactModal" aria-label="Cerrar">&times;</button>
+    <h3 class="modal-title">Contacta con nosotras</h3>
+    <p class="modal-desc">Proyecto en fase piloto. Escríbenos para colaborar o saber más.</p>
+    <div class="modal-email-block">
+      <span class="modal-email-label">Departamento de Marketing</span>
+      <div class="modal-email-row">
+        <span class="modal-email" id="contactEmail">lukreciasteponaityte@gmail.com</span>
+        <button class="modal-copy-btn" id="copyEmailBtn" aria-label="Copiar email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span class="copy-text">Copiar</span>
+        </button>
+      </div>
+    </div>
+    <a href="mailto:lukreciasteponaityte@gmail.com" class="btn btn-primary modal-mailto">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2"/><polyline points="22,6 12,13 2,6"/></svg>
+      Enviar email
+    </a>
+    <p class="modal-footer-text">Universidad de Almería · Ingeniería Química + Marketing</p>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>

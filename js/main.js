@@ -88,6 +88,51 @@ if(navToggle&&navLinks){
   });
 }
 
+// ── Contact modal ──
+const modal=document.getElementById('contactModal');
+const openBtn=document.getElementById('openContactModal');
+const closeBtn=document.getElementById('closeContactModal');
+const copyBtn=document.getElementById('copyEmailBtn');
+const emailEl=document.getElementById('contactEmail');
+
+if(openBtn&&modal){
+  openBtn.addEventListener('click',()=>{
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    closeBtn.focus();
+  });
+  closeBtn.addEventListener('click',()=>{
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    openBtn.focus();
+  });
+  modal.addEventListener('click',(e)=>{
+    if(e.target===modal){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+    }
+  });
+  document.addEventListener('keydown',(e)=>{
+    if(e.key==='Escape'&&modal.classList.contains('open')){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+      openBtn.focus();
+    }
+  });
+}
+if(copyBtn&&emailEl){
+  copyBtn.addEventListener('click',()=>{
+    navigator.clipboard.writeText(emailEl.textContent).then(()=>{
+      copyBtn.classList.add('copied');
+      copyBtn.querySelector('.copy-text').textContent='Copiado';
+      setTimeout(()=>{
+        copyBtn.classList.remove('copied');
+        copyBtn.querySelector('.copy-text').textContent='Copiar';
+      },2000);
+    });
+  });
+}
+
 // ── Smooth scroll for nav links ──
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
