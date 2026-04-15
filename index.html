@@ -29,7 +29,7 @@
       <img src="assets/images/logo-ecovan.jpg" alt="Ecovan logo">
       <span>Ecovan</span>
     </a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#problema">El problema</a>
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#impacto">Impacto</a>
@@ -37,6 +37,9 @@
       <a href="#equipo">Equipo</a>
       <a href="#contacto">Contacto</a>
     </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -448,7 +451,7 @@
   </div>
 </section>
 
-<div class="wave-divider flip" style="background:var(--surface-warm)" aria-hidden="true">
+<div class="wave-divider flip" style="background:#fff" aria-hidden="true">
   <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
     <path d="M0,60 C480,10 960,70 1440,30 L1440,80 L0,80Z" fill="#0C1B2A"/>
   </svg>
@@ -570,13 +573,14 @@
 <section class="cta-section" id="contacto">
   <div class="container cta-content">
     <div class="reveal">
-      <img src="assets/images/logo-ecovan.jpg" alt="Ecovan" style="width:120px;margin:0 auto 32px;border-radius:16px;filter:drop-shadow(0 4px 24px rgba(14,165,233,.3))">
+      <img src="assets/images/logo-ecovan.jpg" alt="Ecovan" class="cta-logo">
       <h2>Tu edificio pierde agua ahora mismo.<br>Ecovan te lo puede mostrar.</h2>
       <p>Sin sensores. Sin instalaciones. Solo datos claros sobre lo que hoy es invisible. Porque la sostenibilidad del agua empieza por ver el problema.</p>
-      <a href="mailto:contacto@ecovan.es" class="btn btn-primary" style="font-size:16px;padding:16px 36px">
+      <a href="#contacto" class="btn btn-primary" style="font-size:16px;padding:16px 36px" onclick="alert('Contacto disponible próximamente. Proyecto en fase de desarrollo.');">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
-        Escríbenos
+        Quiero saber más
       </a>
+      <p style="font-size:12px;color:rgba(255,255,255,.3);margin-top:16px">Proyecto en fase de desarrollo · Universidad de Almería</p>
     </div>
   </div>
 </section>

@@ -14,6 +14,7 @@ body{font-family:'Outfit',system-ui,sans-serif;color:var(--text);background:#FAF
 h1,h2,h3,.display{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15;letter-spacing:-.025em}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
+:focus-visible{outline:2px solid var(--aqua);outline-offset:2px;border-radius:4px}
 
 /* ═══ ANIMATED BACKGROUND DROPS ═══ */
 .bg-drops{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
@@ -41,7 +42,7 @@ a{text-decoration:none;color:inherit}
 .nav-brand{display:flex;align-items:center;gap:12px}
 .nav-brand img{height:44px;width:auto;border-radius:10px;object-fit:contain}
 .nav-brand span{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;
-  background:linear-gradient(135deg,var(--aqua-deep),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  background:linear-gradient(135deg,var(--aqua-deep),var(--teal));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 .nav-links{display:flex;gap:8px}
 .nav-links a{
   font-size:14px;font-weight:500;color:var(--text-light);
@@ -97,7 +98,7 @@ a{text-decoration:none;color:inherit}
 }
 .hero h1 .highlight{
   background:linear-gradient(135deg,var(--aqua),var(--teal));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
   position:relative;
 }
 .hero h1 .highlight::after{
@@ -272,7 +273,7 @@ section{padding:100px 24px;position:relative;z-index:2}
 .counter-num{
   font-family:'Bricolage Grotesque',sans-serif;font-size:3.2rem;font-weight:800;
   background:linear-gradient(135deg,var(--aqua),var(--teal));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
 }
 .counter-label{font-size:14px;color:var(--text-light);margin-top:4px}
 
@@ -530,7 +531,7 @@ footer{
 }
 .hotel-monthly-card.accent .hotel-monthly-num{
   background:linear-gradient(135deg,var(--aqua),var(--teal));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
 }
 .hotel-monthly-label{font-size:13px;color:rgba(255,255,255,.45)}
 .hotel-monthly-arrow{color:rgba(255,255,255,.2)}
@@ -567,7 +568,39 @@ footer{
   position:relative;z-index:2;font-style:italic;
 }
 
+/* ═══ MOBILE NAV TOGGLE ═══ */
+.nav-toggle{
+  display:none;background:none;border:none;cursor:pointer;
+  width:32px;height:24px;position:relative;padding:0;z-index:1001;
+}
+.nav-toggle span{
+  display:block;width:100%;height:2.5px;background:var(--text);
+  border-radius:2px;position:absolute;left:0;
+  transition:all .3s cubic-bezier(.4,0,.2,1);
+}
+.nav-toggle span:nth-child(1){top:0}
+.nav-toggle span:nth-child(2){top:50%;transform:translateY(-50%)}
+.nav-toggle span:nth-child(3){bottom:0}
+.nav-toggle.active span:nth-child(1){top:50%;transform:translateY(-50%) rotate(45deg)}
+.nav-toggle.active span:nth-child(2){opacity:0}
+.nav-toggle.active span:nth-child(3){bottom:50%;transform:translateY(50%) rotate(-45deg)}
+
+/* ═══ CTA LOGO ═══ */
+.cta-logo{
+  width:100px;margin:0 auto 32px;border-radius:16px;
+  box-shadow:0 4px 24px rgba(14,165,233,.3);
+}
+
 /* ═══ RESPONSIVE ═══ */
+
+/* Tablet landscape */
+@media(max-width:1024px){
+  .nav-links a{padding:8px 12px;font-size:13px}
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:16px}
+  .hotel-kpis{gap:16px}
+}
+
+/* Tablet / small laptop */
 @media(max-width:768px){
   .problem-grid,.why-grid{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:1fr}
@@ -576,10 +609,9 @@ footer{
   .pipe-dot svg{width:22px;height:22px}
   .pipe-step{gap:20px}
   .diff-box{padding:28px 20px}
-  .hero-logo{width:170px}
+  .hero-logo{width:160px}
   .water-counter{gap:24px}
   .counter-num{font-size:2.4rem}
-  .nav-links{display:none}
   section{padding:72px 20px}
   .team-grid{flex-direction:column;align-items:center}
   .hotel-kpis{grid-template-columns:repeat(2,1fr)}
@@ -589,4 +621,45 @@ footer{
   .hotel-monthly-arrow{transform:rotate(90deg)}
   .hotel-role-items{gap:12px}
   .hotel-kpi-num{font-size:1.6rem}
+  .cta-logo{width:80px}
+
+  /* Mobile nav */
+  .nav-toggle{display:block}
+  .nav-links{
+    display:none;position:fixed;top:64px;left:0;right:0;
+    background:rgba(255,255,255,.97);backdrop-filter:blur(20px);
+    flex-direction:column;padding:16px 24px 24px;gap:4px;
+    border-bottom:1px solid rgba(14,165,233,.1);
+    box-shadow:0 8px 32px rgba(0,0,0,.08);
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 16px;font-size:15px;border-radius:var(--radius-sm)}
+  .nav-links a:hover{background:var(--aqua-light)}
+
+  .footer-inner{flex-direction:column;text-align:center;gap:12px}
+}
+
+/* Mobile */
+@media(max-width:480px){
+  .hero{padding:80px 16px 40px}
+  .hero h1{font-size:1.8rem}
+  .hero-desc{font-size:15px}
+  .section-title{font-size:1.6rem}
+  .hotel-title{font-size:1.5rem}
+  .hotel-kpis{grid-template-columns:1fr 1fr;gap:12px}
+  .hotel-kpi{padding:20px 12px}
+  .hotel-kpi-num{font-size:1.4rem}
+  .hotel-kpi-range{font-size:1.3rem}
+  .stat-num{font-size:2rem}
+  .counter-num{font-size:2rem}
+  .water-counter{gap:16px}
+  .btn{padding:12px 24px;font-size:14px}
+}
+
+/* Small mobile */
+@media(max-width:360px){
+  .hero h1{font-size:1.6rem}
+  .hotel-kpis{grid-template-columns:1fr}
+  .hotel-kpi-num{font-size:1.6rem}
+  .hotel-monthly-card{min-width:auto;padding:16px 20px}
 }

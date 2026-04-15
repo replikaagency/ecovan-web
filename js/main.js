@@ -68,6 +68,26 @@ document.querySelectorAll('.faq-q').forEach(btn=>{
   });
 });
 
+// ── Mobile nav toggle ──
+const navToggle=document.getElementById('navToggle');
+const navLinks=document.getElementById('navLinks');
+if(navToggle&&navLinks){
+  navToggle.addEventListener('click',()=>{
+    const open=navLinks.classList.toggle('open');
+    navToggle.classList.toggle('active');
+    navToggle.setAttribute('aria-expanded',open);
+    navToggle.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+  });
+  navLinks.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click',()=>{
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded','false');
+      navToggle.setAttribute('aria-label','Abrir menú');
+    });
+  });
+}
+
 // ── Smooth scroll for nav links ──
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
