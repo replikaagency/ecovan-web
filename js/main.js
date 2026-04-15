@@ -1,23 +1,30 @@
-// ── Background drops ──
+// ── Background drops (reduced for performance) ──
 (function(){
   const c=document.getElementById('bgDrops');
   if(!c) return;
-  for(let i=0;i<20;i++){
+  for(let i=0;i<8;i++){
     const s=document.createElement('span');
     s.style.left=Math.random()*100+'%';
-    s.style.animationDuration=(8+Math.random()*12)+'s';
+    s.style.animationDuration=(12+Math.random()*10)+'s';
     s.style.animationDelay=(-Math.random()*20)+'s';
-    s.style.width=(6+Math.random()*8)+'px';
-    s.style.height=(10+Math.random()*10)+'px';
+    s.style.width=(6+Math.random()*6)+'px';
+    s.style.height=(10+Math.random()*8)+'px';
     c.appendChild(s);
   }
 })();
 
-// ── Nav scroll ──
+// ── Nav scroll (passive, throttled) ──
+const mainNav=document.getElementById('mainNav');
+let scrollTicking=false;
 window.addEventListener('scroll',()=>{
-  const nav=document.getElementById('mainNav');
-  if(nav) nav.classList.toggle('scrolled',window.scrollY>60);
-});
+  if(!scrollTicking){
+    scrollTicking=true;
+    requestAnimationFrame(()=>{
+      if(mainNav) mainNav.classList.toggle('scrolled',window.scrollY>60);
+      scrollTicking=false;
+    });
+  }
+},{passive:true});
 
 // ── Scroll reveal ──
 const ro=new IntersectionObserver((entries)=>{
