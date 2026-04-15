@@ -1,0 +1,13 @@
+{
+  "name": "ecovan-web",
+  "version": "1.0.0",
+  "description": "Ecovan — Haz visible el desperdicio de agua. Landing page del proyecto.",
+  "scripts": {
+    "dev": "npx serve . -p 3000 -s",
+    "start": "npx serve . -p 3000 -s",
+    "preview": "open http://localhost:3000 && npx serve . -p 3000 -s"
+  },
+  "keywords": ["ecovan", "water", "sustainability", "ual"],
+  "license": "UNLICENSED",
+  "private": true
+}

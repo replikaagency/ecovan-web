@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecovan — Haz visible el desperdicio de agua</title>
+<meta name="description" content="Ecovan convierte el desperdicio invisible de agua en impacto visible. Reutilización y sostenibilidad hídrica.">
+<meta name="theme-color" content="#0EA5E9">
+<meta property="og:title" content="Ecovan — Haz visible el desperdicio de agua">
+<meta property="og:description" content="Ecovan analiza el consumo de agua de edificios y convierte el desperdicio invisible en datos claros.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/logo-ecovan.jpg">
+<link rel="icon" type="image/jpeg" href="assets/images/logo-ecovan.jpg">
+<link rel="apple-touch-icon" href="assets/images/logo-ecovan.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ANIMATED BACKGROUND DROPS -->
+<div class="bg-drops" id="bgDrops" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav" role="navigation" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" aria-label="Ecovan - Inicio">
+      <img src="assets/images/logo-ecovan.jpg" alt="Ecovan logo">
+      <span>Ecovan</span>
+    </a>
+    <div class="nav-links">
+      <a href="#problema">El problema</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#impacto">Impacto</a>
+      <a href="#caso-hotel">Caso real</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bubble" style="width:120px;height:120px;top:15%;left:8%;animation-duration:7s" aria-hidden="true"></div>
+  <div class="hero-bubble" style="width:80px;height:80px;top:60%;right:12%;animation-duration:9s;animation-delay:-2s" aria-hidden="true"></div>
+  <div class="hero-bubble" style="width:50px;height:50px;top:30%;right:25%;animation-duration:6s;animation-delay:-4s" aria-hidden="true"></div>
+  <div class="hero-bubble" style="width:60px;height:60px;bottom:25%;left:20%;animation-duration:10s;animation-delay:-1s" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <img src="assets/images/logo-ecovan.jpg" alt="Ecovan — Haz visible el desperdicio de agua" class="hero-logo">
+
+    <div class="hero-tagline">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+      Reutilización y sostenibilidad del agua
+    </div>
+
+    <h1>El agua que pierdes<br>cada día, <span class="highlight">ahora es visible</span></h1>
+
+    <p class="hero-desc">Ecovan analiza el consumo de agua de edificios e instalaciones y convierte el desperdicio invisible en datos claros: litros perdidos, euros desperdiciados e impacto ambiental.</p>
+
+    <div class="hero-cta-row">
+      <a href="#como-funciona" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+        Ver cómo funciona
+      </a>
+      <a href="#impacto" class="btn btn-outline">Descubre el impacto</a>
+    </div>
+  </div>
+
+  <div class="hero-waves" aria-hidden="true">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,80 C360,20 720,100 1080,40 C1260,10 1380,60 1440,50 L1440,120 L0,120Z" fill="#F0FDFA" opacity=".5"/>
+      <path d="M0,90 C300,40 600,110 900,50 C1200,0 1350,80 1440,60 L1440,120 L0,120Z" fill="#FAFFFE"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ANIMATED WATER COUNTER -->
+<section style="background:var(--surface-warm);padding:60px 24px">
+  <div class="water-counter reveal">
+    <div class="counter-block">
+      <div class="counter-num" data-target="847000">0</div>
+      <div class="counter-label">Litros perdidos al año<br>por un edificio medio</div>
+    </div>
+    <div class="counter-block">
+      <div class="counter-num" data-target="4200">0 &euro;</div>
+      <div class="counter-label">Coste económico<br>del desperdicio</div>
+    </div>
+    <div class="counter-block">
+      <div class="counter-num" data-target="18">0%</div>
+      <div class="counter-label">Ineficiencia media<br>detectada en simulaciones</div>
+    </div>
+  </div>
+  <p style="text-align:center;font-size:11px;color:var(--text-light);margin-top:20px;opacity:.5">
+    *Estimaciones basadas en simulaciones con datos públicos del sector hídrico. Ecovan está en fase de desarrollo.
+  </p>
+</section>
+
+<!-- EL PROBLEMA -->
+<section class="problem-section" id="problema">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-badge badge-aqua">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        El problema
+      </span>
+      <h2 class="section-title">La mayor parte del agua desperdiciada<br>es completamente invisible</h2>
+      <p class="section-desc">Fugas, sistemas antiguos, consumos sin control. Miles de litros se pierden cada mes sin que nadie lo note.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card reveal" style="transition-delay:.1s">
+        <div class="problem-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+        </div>
+        <h3>Desperdicio silencioso</h3>
+        <p>Un edificio medio pierde entre el 10% y el 25% de su agua por fugas, sistemas viejos o consumos sin control. Son miles de litros al mes que desaparecen sin que nadie lo sepa.</p>
+      </div>
+      <div class="problem-card reveal" style="transition-delay:.2s">
+        <div class="problem-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Falta de visibilidad</h3>
+        <p>El desperdicio no aparece desglosado en la factura, así que nadie actúa. No es falta de voluntad, es falta de información clara y accesible sobre lo que realmente ocurre.</p>
+      </div>
+      <div class="problem-card reveal" style="transition-delay:.3s">
+        <div class="problem-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="10"/></svg>
+        </div>
+        <h3>Recursos desperdiciados</h3>
+        <p>Cada litro perdido ya fue tratado, transportado y pagado. El desperdicio de agua implica también un desperdicio de energía, químicos y recursos naturales que se emplearon para nada.</p>
+      </div>
+      <div class="problem-card reveal" style="transition-delay:.4s">
+        <div class="problem-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        </div>
+        <h3>Impacto acumulado</h3>
+        <p>Si 100 edificios redujeran su desperdicio solo un 10%, el ahorro sería de millones de litros al año. La sostenibilidad hídrica empieza por hacer visible lo que hoy no se ve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-divider" style="background:var(--surface-warm)" aria-hidden="true">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+    <path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80Z" fill="#FAFFFE"/>
+  </svg>
+</div>
+
+<!-- CÓMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="container-sm">
+    <div class="text-center reveal">
+      <span class="section-badge badge-teal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px" aria-hidden="true"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>
+        Cómo funciona
+      </span>
+      <h2 class="section-title">Tres pasos hacia la<br>sostenibilidad hídrica</h2>
+      <p class="section-desc">Sin sensores. Sin instalaciones. Ecovan trabaja con los datos de consumo que ya existen.</p>
+    </div>
+    <div class="pipeline">
+      <div class="pipeline-line" aria-hidden="true"></div>
+
+      <div class="pipe-step reveal" style="transition-delay:.1s">
+        <div class="pipe-dot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 21l-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="num">1</span>
+        </div>
+        <div class="pipe-content">
+          <h3>Analiza</h3>
+          <p>Ecovan recibe datos de consumo de agua: facturas, lecturas de contadores y registros de uso. No necesita hardware ni sensores adicionales.</p>
+        </div>
+      </div>
+
+      <div class="pipe-step reveal" style="transition-delay:.2s">
+        <div class="pipe-dot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+          <span class="num">2</span>
+        </div>
+        <div class="pipe-content">
+          <h3>Detecta</h3>
+          <p>Compara patrones de consumo con referencias del sector y señala anomalías: fugas probables, consumos excesivos o picos inusuales que indican ineficiencia.</p>
+        </div>
+      </div>
+
+      <div class="pipe-step reveal" style="transition-delay:.3s">
+        <div class="pipe-dot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+          <span class="num">3</span>
+        </div>
+        <div class="pipe-content">
+          <h3>Muestra</h3>
+          <p>Genera un informe claro con tres datos concretos: litros perdidos, euros desperdiciados e impacto ambiental. Sin tecnicismos. Información accionable para la reutilización del agua.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE TO STATS -->
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+    <path d="M0,60 C360,20 720,80 1080,30 C1260,10 1380,50 1440,40 L1440,80 L0,80Z" fill="#0C1B2A"/>
+  </svg>
+</div>
+
+<!-- STATS SECTION -->
+<section class="stats-section" id="impacto">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-badge" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.6)">Impacto estimado</span>
+      <h2 class="section-title" style="color:#fff">Lo que el desperdicio invisible puede costar</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,.45)">Datos simulados que muestran la magnitud del problema y el potencial de la reutilización del agua.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card reveal" style="transition-delay:.1s">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+        </div>
+        <div class="stat-num">&euro;4.200<small style="font-size:.5em;opacity:.6">/año</small></div>
+        <div class="stat-label">Coste del desperdicio</div>
+        <div class="stat-desc">Un edificio con un 18% de ineficiencia hídrica puede perder hasta &euro;4.200 al año en agua que nadie usa.</div>
+      </div>
+      <div class="stat-card reveal" style="transition-delay:.2s">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="stat-num">&lt;72h</div>
+        <div class="stat-label">Tiempo de detección</div>
+        <div class="stat-desc">Con datos de consumo disponibles, Ecovan identifica ineficiencias en menos de 72 horas.</div>
+      </div>
+      <div class="stat-card reveal" style="transition-delay:.3s">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+        </div>
+        <div class="stat-num">18%</div>
+        <div class="stat-label">Ineficiencia media</div>
+        <div class="stat-desc">En simulaciones, la ineficiencia media en consumo de agua es del 18%. Agua que se pierde sin que nadie lo sepa.</div>
+      </div>
+    </div>
+    <p class="stats-note reveal" style="transition-delay:.4s">Todas las cifras son estimaciones basadas en simulaciones y datos públicos del sector hídrico. Ecovan está en fase de desarrollo.</p>
+  </div>
+</section>
+
+<!-- WAVE FROM STATS -->
+<div class="wave-divider flip" style="background:var(--surface-blue)" aria-hidden="true">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+    <path d="M0,60 C480,10 960,70 1440,30 L1440,80 L0,80Z" fill="#0C1B2A"/>
+  </svg>
+</div>
+
+<!-- POR QUÉ IMPORTA -->
+<section class="why-section">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-badge badge-emerald">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+        Por qué importa
+      </span>
+      <h2 class="section-title">Reducir el desperdicio<br>empieza por verlo</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal" style="transition-delay:.1s">
+        <div class="why-card-icon blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--aqua)" aria-hidden="true"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
+        </div>
+        <h3>Menos agua perdida, más recursos aprovechados</h3>
+        <p>El agua que se pierde ya fue tratada, transportada y pagada. Reducir ese desperdicio tiene un impacto directo en el consumo de recursos y en la sostenibilidad del ciclo hídrico.</p>
+      </div>
+      <div class="why-card reveal" style="transition-delay:.2s">
+        <div class="why-card-icon green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--teal)" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Cuando la gente ve el problema, actúa</h3>
+        <p>Hacer visible el consumo cambia la forma en que las personas lo gestionan. Un gestor que sabe que pierde 2.000 litros diarios tiene un motivo concreto para actuar por la reutilización.</p>
+      </div>
+      <div class="why-card reveal" style="transition-delay:.3s">
+        <div class="why-card-icon emerald">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--emerald)" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        </div>
+        <h3>A escala, el efecto se multiplica</h3>
+        <p>Si 100 edificios redujeran su desperdicio un 10%, el ahorro sería de millones de litros al año. Cada edificio que se suma contribuye a la sostenibilidad hídrica de su comunidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LA DIFERENCIA -->
+<section class="diff-section">
+  <div class="container-sm">
+    <div class="text-center reveal">
+      <span class="section-badge badge-teal">La diferencia</span>
+      <h2 class="section-title">Ecovan no es domótica<br>ni un gestor de facturas</h2>
+      <p class="section-desc">No controla grifos. No automatiza nada. No necesita hardware. Lo que hace es más simple y más necesario.</p>
+    </div>
+    <div class="diff-box reveal" style="transition-delay:.1s">
+      <p class="diff-intro">Ecovan se centra en un solo objetivo: hacer visible el desperdicio de agua para fomentar su reutilización y el uso sostenible.</p>
+      <div class="diff-items">
+        <div class="diff-item">
+          <div class="diff-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+          <p>Toma datos que ya existen: facturas, contadores, registros de consumo</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+          <p>Encuentra el desperdicio que nadie está viendo</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+          <p>Lo traduce a litros, euros e impacto ambiental</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+          <p>Te da la información necesaria para decidir cómo reutilizar y ahorrar agua</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- CASO DEMO: HOTEL                           -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+    <path d="M0,60 C360,20 720,80 1080,30 C1260,10 1380,50 1440,40 L1440,80 L0,80Z" fill="#0C1B2A"/>
+  </svg>
+</div>
+
+<section class="hotel-section" id="caso-hotel">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="hotel-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px" aria-hidden="true"><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7"/><path d="M1 7h22"/><path d="M6 3h12l3 4H3z"/></svg>
+        Ejemplo aplicado
+      </span>
+      <h2 class="hotel-title">Un hotel puede estar tirando miles<br>de litros de agua al día sin saberlo</h2>
+      <p class="hotel-subtitle">Caso simulado basado en rangos de consumo reales del sector hotelero y estándares de reutilización de aguas grises.</p>
+    </div>
+
+    <!-- KPI Cards -->
+    <div class="hotel-kpis reveal" style="transition-delay:.1s">
+      <div class="hotel-kpi">
+        <div class="hotel-kpi-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="hotel-kpi-num" data-target="100">0</div>
+        <div class="hotel-kpi-label">huéspedes/día</div>
+      </div>
+      <div class="hotel-kpi">
+        <div class="hotel-kpi-icon blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+        </div>
+        <div class="hotel-kpi-num" data-target="30000">0</div>
+        <div class="hotel-kpi-label">litros/día consumidos</div>
+      </div>
+      <div class="hotel-kpi highlight-kpi">
+        <div class="hotel-kpi-icon teal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
+        </div>
+        <div class="hotel-kpi-num" data-target="7500">0</div>
+        <div class="hotel-kpi-label">litros/día recuperables</div>
+      </div>
+      <div class="hotel-kpi">
+        <div class="hotel-kpi-icon emerald">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+        </div>
+        <div class="hotel-kpi-num hotel-kpi-range">300–700</div>
+        <div class="hotel-kpi-label">&euro;/mes ahorro potencial</div>
+      </div>
+    </div>
+
+    <!-- Visual Chart -->
+    <div class="hotel-visual reveal" style="transition-delay:.2s">
+      <div class="hotel-chart-container">
+        <h3 class="hotel-chart-title">Distribución del consumo diario — 30.000 L</h3>
+
+        <!-- Stacked Bar -->
+        <div class="hotel-bar-wrapper">
+          <div class="hotel-bar">
+            <div class="hotel-bar-segment bar-used" style="width:75%">
+              <span class="bar-label">75% uso directo</span>
+            </div>
+            <div class="hotel-bar-segment bar-recoverable" style="width:25%">
+              <span class="bar-label">25% recuperable</span>
+            </div>
+          </div>
+          <div class="hotel-bar-legend">
+            <div class="legend-item"><span class="legend-dot dot-used"></span>Agua consumida no reutilizable</div>
+            <div class="legend-item"><span class="legend-dot dot-recoverable"></span>Agua gris reutilizable (duchas y lavabos)</div>
+          </div>
+        </div>
+
+        <!-- Monthly projection -->
+        <div class="hotel-monthly">
+          <div class="hotel-monthly-card">
+            <div class="hotel-monthly-num">225.000 L</div>
+            <div class="hotel-monthly-label">reutilizables al mes</div>
+          </div>
+          <div class="hotel-monthly-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+          <div class="hotel-monthly-card accent">
+            <div class="hotel-monthly-num">300–700 &euro;</div>
+            <div class="hotel-monthly-label">ahorro mensual estimado</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ecovan role -->
+      <div class="hotel-ecovan-role">
+        <h4>Ecovan en este escenario</h4>
+        <div class="hotel-role-items">
+          <div class="hotel-role-item">
+            <div class="hotel-role-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 21l-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+            </div>
+            <div>
+              <strong>Detecta</strong>
+              <p>Identifica los 7.500 L/día de agua gris que actualmente van al desagüe.</p>
+            </div>
+          </div>
+          <div class="hotel-role-item">
+            <div class="hotel-role-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+            </div>
+            <div>
+              <strong>Visualiza</strong>
+              <p>Muestra el desperdicio en litros, euros e impacto ambiental para que el hotel lo entienda.</p>
+            </div>
+          </div>
+          <div class="hotel-role-item">
+            <div class="hotel-role-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+            </div>
+            <div>
+              <strong>Facilita la acción</strong>
+              <p>Con datos claros, el hotel puede decidir implementar sistemas de reutilización de aguas grises.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="hotel-disclaimer reveal" style="transition-delay:.3s">
+      Ejemplo ilustrativo basado en consumos medios del sector hotelero (200–500 L/huésped/día) y porcentajes estándar de reutilización de aguas grises. No representa mediciones reales de un hotel concreto.
+    </p>
+  </div>
+</section>
+
+<div class="wave-divider flip" style="background:var(--surface-warm)" aria-hidden="true">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+    <path d="M0,60 C480,10 960,70 1440,30 L1440,80 L0,80Z" fill="#0C1B2A"/>
+  </svg>
+</div>
+
+<!-- DATA TRANSPARENCY -->
+<section class="data-section">
+  <div class="container-sm">
+    <div class="text-center reveal">
+      <span class="section-badge badge-aqua">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+        Transparencia
+      </span>
+      <h2 class="section-title">Lo que mostramos<br>y lo que no</h2>
+      <p class="section-desc">Somos honestas con nuestros datos. Ecovan está en fase de desarrollo y creemos que la transparencia es parte de la sostenibilidad.</p>
+    </div>
+    <div class="data-cards">
+      <div class="data-card reveal" style="transition-delay:.1s">
+        <div class="data-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        </div>
+        <div>
+          <h3>¿De dónde salen los números?</h3>
+          <p>De simulaciones. Hemos usado datos públicos del sector hídrico para crear escenarios realistas. No son mediciones de edificios reales, sino proyecciones que ilustran el tipo de resultados que Ecovan podría generar.</p>
+        </div>
+      </div>
+      <div class="data-card reveal" style="transition-delay:.2s">
+        <div class="data-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        </div>
+        <div>
+          <h3>¿Qué es real y qué es demo?</h3>
+          <p>Todo lo que ves ahora es una demostración funcional del concepto. Cuando se conecte a datos reales, los resultados serán mediciones verificables. Hasta entonces, todo dato mostrado es simulado y lo indicamos siempre.</p>
+        </div>
+      </div>
+      <div class="data-card reveal" style="transition-delay:.3s">
+        <div class="data-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        </div>
+        <div>
+          <h3>¿Por qué mostramos datos simulados?</h3>
+          <p>Porque para explicar qué hace Ecovan, necesitamos mostrar cómo se ve el resultado. Es como un prototipo funcional: muestra el formato y el tipo de información, pero con datos de ejemplo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container-sm">
+    <div class="text-center reveal">
+      <span class="section-badge badge-aqua">Preguntas frecuentes</span>
+      <h2 class="section-title">Respuestas directas</h2>
+    </div>
+    <div class="faq-list reveal" style="transition-delay:.1s">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">¿Qué hace Ecovan exactamente?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">Ecovan analiza datos de consumo de agua de edificios e instalaciones y genera un informe que muestra cuánta agua se pierde, cuánto dinero representa y cuál es el impacto ambiental. Todo enfocado a facilitar la reutilización y el uso sostenible del agua.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">¿De dónde salen los datos?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">De los propios datos del edificio: facturas de agua, lecturas de contadores y registros de consumo. Ecovan no necesita instalar sensores ni dispositivos adicionales.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">¿Los ahorros que mostramos son reales?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">Las cifras que aparecen son estimaciones basadas en simulaciones con datos públicos del sector hídrico. Ecovan está en fase de desarrollo y cuando se conecte a datos reales, los resultados serán verificables.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">¿Quién puede usar Ecovan?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">Cualquier gestor de edificios, empresa, comunidad de propietarios o instalación que quiera entender mejor su consumo de agua y detectar oportunidades de reutilización y ahorro.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">¿Hay que instalar sensores o hardware?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">No. Ecovan trabaja con los datos que ya existen. No requiere instalación de ningún tipo de sensor ni dispositivo adicional.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">¿Esto es un producto terminado?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">No, Ecovan está en fase de desarrollo. Lo que ves es una demostración funcional del concepto. Nuestro objetivo es contribuir a la sostenibilidad hídrica haciendo visible lo que hoy no se ve.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section class="team-section" id="equipo">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-badge badge-teal">El equipo</span>
+      <h2 class="section-title">Quiénes somos</h2>
+      <p class="section-desc">Estudiantes de la Universidad de Almería, comprometidas con la sostenibilidad del agua.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal" style="transition-delay:.1s">
+        <div class="team-avatar">&#x1F469;&#x200D;&#x1F52C;</div>
+        <h3>Klaudia</h3>
+        <p>Ingeniería Química &middot; UAL</p>
+      </div>
+      <div class="team-card reveal" style="transition-delay:.2s">
+        <div class="team-avatar">&#x1F4CA;</div>
+        <h3>Lukrecia</h3>
+        <p>Marketing &middot; UAL</p>
+      </div>
+      <div class="team-card reveal" style="transition-delay:.3s">
+        <div class="team-avatar">&#x1F469;&#x200D;&#x1F52C;</div>
+        <h3>Lucía</h3>
+        <p>Ingeniería Química &middot; UAL</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+    <path d="M0,40 C360,70 720,10 1080,50 C1260,65 1380,30 1440,45 L1440,80 L0,80Z" fill="#0C2942"/>
+  </svg>
+</div>
+<section class="cta-section" id="contacto">
+  <div class="container cta-content">
+    <div class="reveal">
+      <img src="assets/images/logo-ecovan.jpg" alt="Ecovan" style="width:120px;margin:0 auto 32px;border-radius:16px;filter:drop-shadow(0 4px 24px rgba(14,165,233,.3))">
+      <h2>Tu edificio pierde agua ahora mismo.<br>Ecovan te lo puede mostrar.</h2>
+      <p>Sin sensores. Sin instalaciones. Solo datos claros sobre lo que hoy es invisible. Porque la sostenibilidad del agua empieza por ver el problema.</p>
+      <a href="mailto:contacto@ecovan.es" class="btn btn-primary" style="font-size:16px;padding:16px 36px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+        Escríbenos
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/images/logo-ecovan.jpg" alt="Ecovan">
+      <span>Ecovan</span>
+    </div>
+    <p class="footer-copy">&copy; 2026 Ecovan &middot; Haciendo visible el desperdicio de agua &middot; Datos estimados</p>
+    <p class="footer-ual">Proyecto de estudiantes &middot; Universidad de Almería</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
